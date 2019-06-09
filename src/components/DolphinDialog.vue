@@ -1,9 +1,9 @@
 <template>
-  <div class="dolphin-menu-wrapper">
+  <div class="dolphin-dialog-wrapper">
     <transition>
-      <div class="dolphin-menu-background" v-show="visible" @click="closeMenu()"></div>
+      <div class="dolphin-dialog-background" v-show="visible" @click="closeDialog()"></div>
     </transition>
-    <div class="dolphin-menu" :class="{dolphinMenuShow: visible, dolphinMenuHide: !visible}">
+    <div class="dolphin-dialog" :class="{dolphinDialogShow: visible, dolphinDialogHide: !visible}">
       <slot></slot>
     </div>
   </div>
@@ -11,7 +11,7 @@
 
 <script>
 export default {
-  name: 'DolphinMenu',
+  name: 'DolphinDialog',
 
   props: {
     visible: {
@@ -21,15 +21,15 @@ export default {
   },
 
   methods: {
-    closeMenu() {
-      this.$emit('closeMenu', false);
+    closeDialog() {
+      this.$emit('closeDialog', false);
     }
   },
 };
 </script>
 
 <style scoped lang="scss">
-.dolphin-menu {
+.dolphin-dialog {
   background-color: #fff;
   border-radius: 10px 10px 0 0;
   height: 50vh;
@@ -39,7 +39,7 @@ export default {
   z-index: 1;
 }
 
-.dolphin-menu-background {
+.dolphin-dialog-background {
   background-color: #000;
   bottom: 0;
   height: 100vh;

@@ -1,4 +1,4 @@
-# vue-dolphin-menu
+# vue-dolphin-dialog
 
 ## Project setup
 ```

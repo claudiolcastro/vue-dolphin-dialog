@@ -2,19 +2,19 @@
   <div id="app">
     <button @click="show = !show">MENU</button>
     <img alt="Vue logo" src="./assets/logo.png">
-    <DolphinMenu @closeMenu="show = false" :visible="show">
+    <DolphinDialog @closeDialog="show = false" :visible="show">
       <h3>Menu Content</h3>
-    </DolphinMenu>
+    </DolphinDialog>
   </div>
 </template>
 
 <script>
-import DolphinMenu from './components/DolphinMenu.vue';
+import DolphinDialog from './components/DolphinDialog.vue';
 
 export default {
   name: 'app',
   components: {
-    DolphinMenu,
+    DolphinDialog,
   },
   data() {
     return {
