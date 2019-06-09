@@ -1,8 +1,10 @@
 <template>
   <div id="app">
-    <button @click="show = !show">Open Menu</button>
+    <button @click="show = !show">MENU</button>
     <img alt="Vue logo" src="./assets/logo.png">
-    <DolphinMenu :class="{show: show, hide: !show}"/>
+    <DolphinMenu @closeMenu="show = false" :visible="show">
+      <h3>Menu Content</h3>
+    </DolphinMenu>
   </div>
 </template>
 
@@ -28,7 +30,11 @@ body {
 }
 
 button {
-  border: 1px solid #ccc;
+  background: #fff;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
 }
 
 img {
@@ -43,12 +49,5 @@ img {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
-}
-
-.show {
-  bottom: 0 !important;
-}
-.hide {
-  bottom: -50% !important;
 }
 </style>
