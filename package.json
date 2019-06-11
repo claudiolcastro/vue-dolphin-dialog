@@ -1,7 +1,24 @@
 {
   "name": "vue-dolphin-dialog",
-  "version": "0.1.0",
-  "private": true,
+  "description": "Bottom Dialog for mobile applications",
+  "author": "Claudio Castro <claudioluiz.castro@gmail.com>",
+  "main": "dist/vue-dolphin-dialog.umd.js",
+  "unpkg": "dist/vue-dolphin-dialog.umd.min.js",
+  "version": "1.0.0",
+  "private": false,
+  "license": "MIT",
+  "keywords": [
+    "vue",
+    "vue.js",
+    "dialog",
+    "mobile",
+    "bottom",
+    "bottom-menu",
+    "android",
+    "ios",
+    "native",
+    "dolphin"
+  ],
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",

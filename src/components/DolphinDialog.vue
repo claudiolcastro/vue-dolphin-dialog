@@ -49,10 +49,10 @@ export default {
   width: 100%;
 }
 
-.dolphinMenuShow {
+.dolphinDialogShow {
   bottom: 0 !important;
 }
-.dolphinMenuHide {
+.dolphinDialogHide {
   bottom: -70% !important;
 }
 </style>
