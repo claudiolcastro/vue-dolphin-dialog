@@ -3,7 +3,7 @@
     <transition>
       <div class="dolphin-dialog-background" v-show="visible" @click="closeDialog()"></div>
     </transition>
-    <div class="dolphin-dialog" :class="{dolphinDialogShow: visible, dolphinDialogHide: !visible}">
+    <div :style="{backgroundColor, height: dialogSize}" class="dolphin-dialog" :class="{dolphinDialogShow: visible, dolphinDialogHide: !visible}">
       <slot></slot>
     </div>
   </div>
@@ -18,6 +18,24 @@ export default {
       type: Boolean,
       default: false,
     },
+    backgroundColor: {
+      type: String,
+      default: '#fff',
+    },
+    size: {
+      type: Number,
+      default: 50,
+    },
+  },
+
+  computed: {
+    dialogSize() {
+      const validSizes = [20, 30, 40, 50, 60, 70, 80, 90];
+      if (validSizes.includes(this.size)) {
+        return `${this.size}vh`;
+      }
+      return '50vh';
+    }
   },
 
   methods: {
@@ -25,14 +43,14 @@ export default {
       this.$emit('closeDialog', false);
     }
   },
+
+
 };
 </script>
 
 <style scoped lang="scss">
 .dolphin-dialog {
-  background-color: #fff;
   border-radius: 10px 10px 0 0;
-  height: 50vh;
   transition: .5s;
   position: fixed;
   width: 100%;
@@ -53,6 +71,6 @@ export default {
   bottom: 0 !important;
 }
 .dolphinDialogHide {
-  bottom: -70% !important;
+  bottom: -90% !important;
 }
 </style>

@@ -2,7 +2,7 @@
   <div id="app">
     <button @click="show = !show">MENU</button>
     <img alt="Vue logo" src="./assets/logo.png">
-    <DolphinDialog @closeDialog="show = false" :visible="show">
+    <DolphinDialog :size="40" @closeDialog="show = false" :visible="show">
       <h3>Menu Content</h3>
     </DolphinDialog>
   </div>
