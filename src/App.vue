@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <h1>Dolphin Example</h1>
     <button @click="show = !show">MENU</button>
     <img alt="Vue logo" src="./assets/logo.png">
     <DolphinDialog :size="40" @closeDialog="show = false" :visible="show">
@@ -19,7 +20,7 @@ export default {
   data() {
     return {
       show: false,
-    }
+    };
   },
 };
 </script>

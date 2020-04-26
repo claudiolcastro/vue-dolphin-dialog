@@ -3,7 +3,11 @@
     <transition>
       <div class="dolphin-dialog-background" v-show="visible" @click="closeDialog()"></div>
     </transition>
-    <div :style="{backgroundColor, height: dialogSize}" class="dolphin-dialog" :class="{dolphinDialogShow: visible, dolphinDialogHide: !visible}">
+    <div
+      :style="{backgroundColor, height: dialogSize}"
+      class="dolphin-dialog"
+      :class="{dolphinDialogShow: visible, dolphinDialogHide: !visible}"
+    >
       <slot></slot>
     </div>
   </div>
@@ -35,13 +39,13 @@ export default {
         return `${this.size}vh`;
       }
       return '50vh';
-    }
+    },
   },
 
   methods: {
     closeDialog() {
       this.$emit('closeDialog', false);
-    }
+    },
   },
 
 
